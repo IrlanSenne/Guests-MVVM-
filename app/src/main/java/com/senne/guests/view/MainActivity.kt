@@ -1,4 +1,4 @@
-package com.senne.guests
+package com.senne.guests.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,7 +12,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.senne.guests.view.GuestFromActivity
+import com.senne.guests.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,7 +34,10 @@ class MainActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.nav_all, R.id.nav_presents, R.id.nav_absents), drawerLayout)
+            R.id.nav_all,
+            R.id.nav_presents,
+            R.id.nav_absents
+        ), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
