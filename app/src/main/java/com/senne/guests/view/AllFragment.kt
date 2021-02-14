@@ -1,4 +1,4 @@
-package com.senne.guests.ui.home
+package com.senne.guests.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.senne.guests.R
+import com.senne.guests.viewModel.AllViewModel
 
 class AllFragment : Fragment() {
 

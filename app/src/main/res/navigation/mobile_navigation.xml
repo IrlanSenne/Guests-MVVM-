@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_all"
-        android:name="com.senne.guests.ui.home.AllFragment"
+        android:name="com.senne.guests.view.AllFragment"
         android:label="@string/menu_all_guests"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_presents"
-        android:name="com.senne.guests.ui.gallery.PresentFragment"
+        android:name="com.senne.guests.view.PresentFragment"
         android:label="@string/presents"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_absents"
-        android:name="com.senne.guests.ui.slideshow.AbsentFragment"
+        android:name="com.senne.guests.view.AbsentFragment"
         android:label="@string/absents"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>

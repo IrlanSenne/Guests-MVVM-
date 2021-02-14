@@ -1,4 +1,4 @@
-package com.senne.guests.ui.slideshow
+package com.senne.guests.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,21 +9,22 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.senne.guests.R
+import com.senne.guests.viewModel.PresentViewModel
 
-class AbsentFragment : Fragment() {
+class PresentFragment : Fragment() {
 
-    private lateinit var absentViewModel: AbsentViewModel
+    private lateinit var presentViewModel: PresentViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        absentViewModel =
-                ViewModelProvider(this).get(AbsentViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_slideshow, container, false)
-        val textView: TextView = root.findViewById(R.id.text_slideshow)
-        absentViewModel.text.observe(viewLifecycleOwner, Observer {
+        presentViewModel =
+                ViewModelProvider(this).get(PresentViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_gallery, container, false)
+        val textView: TextView = root.findViewById(R.id.text_gallery)
+        presentViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

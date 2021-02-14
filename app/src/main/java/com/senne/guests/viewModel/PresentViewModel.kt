@@ -1,4 +1,4 @@
-package com.senne.guests.ui.gallery
+package com.senne.guests.viewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
