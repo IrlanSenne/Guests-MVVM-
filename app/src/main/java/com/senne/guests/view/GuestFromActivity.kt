@@ -14,10 +14,6 @@ import com.senne.guests.R
 
 class GuestFromActivity : AppCompatActivity(), View.OnClickListener {
 
-    var button_save: Button = findViewById(R.id.button_save)
-    var edit_name: EditText = findViewById(R.id.edit_name)
-    var presence: RadioButton = findViewById(R.id.radio_present)
-
     private lateinit var mViewModel: GuestFormViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,15 +29,18 @@ class GuestFromActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View) {
         val id = view.id
         if(id == R.id.button_save) {
-            val name = this.edit_name.toString()
-            val presence = this.presence.isChecked
+            var edit_name: EditText = findViewById(R.id.edit_name)
+            val name = edit_name.toString()
+            var presence: RadioButton = findViewById(R.id.radio_present)
 
-            mViewModel.save(name,presence)
+
+            mViewModel.save(name,presence.isChecked)
         }
     }
 
     private fun  setListeners() {
-       this.button_save.setOnClickListener(this)
+        var button_save: Button = findViewById(R.id.button_save)
+        button_save.setOnClickListener(this)
 
     }
 
