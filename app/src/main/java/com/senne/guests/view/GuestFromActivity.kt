@@ -33,7 +33,6 @@ class GuestFromActivity : AppCompatActivity(), View.OnClickListener {
             val name = edit_name.toString()
             var presence: RadioButton = findViewById(R.id.radio_present)
 
-
             mViewModel.save(name,presence.isChecked)
         }
     }
