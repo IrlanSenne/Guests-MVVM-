@@ -47,6 +47,7 @@ class GuestRepository private constructor(context: Context) {
 
             val selection = DataBaseConstants.GUEST.COLUMNS.ID + "= ?"
             val args = arrayOf(id.toString())
+
             val cursor = db.query(
                     DataBaseConstants.GUEST.TABLE_NAME,
                     projection,
@@ -73,7 +74,7 @@ class GuestRepository private constructor(context: Context) {
 
     fun getAll(): List<GuestModel> {
         val list: MutableList<GuestModel> = ArrayList()
-        var guest: GuestModel? = null
+
         return try {
             val db = mGuestDataBaseHelper.readableDatabase
 
