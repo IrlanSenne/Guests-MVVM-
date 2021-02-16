@@ -48,9 +48,12 @@ class AllFragment : Fragment() {
                 intent.putExtras(bundle)
                 startActivity(intent)
             }
+           override fun onDelete(id: Int) {
+               allViewModel.delete(id)
+                allViewModel.load(GuestConstants.FILTER.empty)
+            }
         }
         mAdapter.attachListener(mListener)
-
         observer()
 
         return root
@@ -58,7 +61,7 @@ class AllFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        allViewModel.load()
+        allViewModel.load(GuestConstants.FILTER.empty)
 
     }
 
